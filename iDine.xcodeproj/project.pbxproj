@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		A58057B826ADBEFB00C6C5A9 /* iDineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58057B726ADBEFB00C6C5A9 /* iDineApp.swift */; };
-		A58057BA26ADBEFB00C6C5A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58057B926ADBEFB00C6C5A9 /* ContentView.swift */; };
 		A58057BC26ADBEFD00C6C5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58057BB26ADBEFD00C6C5A9 /* Assets.xcassets */; };
 		A58057BF26ADBEFD00C6C5A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58057BE26ADBEFD00C6C5A9 /* Preview Assets.xcassets */; };
+		A58057CC26ADC0CA00C6C5A9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58057CB26ADC0CA00C6C5A9 /* MenuView.swift */; };
+		A58057CF26ADC16200C6C5A9 /* Bundle+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58057CE26ADC16200C6C5A9 /* Bundle+Decode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A58057B426ADBEFB00C6C5A9 /* iDine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58057B726ADBEFB00C6C5A9 /* iDineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDineApp.swift; sourceTree = "<group>"; };
-		A58057B926ADBEFB00C6C5A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A58057BB26ADBEFD00C6C5A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A58057BE26ADBEFD00C6C5A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A58057C026ADBEFD00C6C5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58057CB26ADC0CA00C6C5A9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		A58057CE26ADC16200C6C5A9 /* Bundle+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +54,8 @@
 		A58057B626ADBEFB00C6C5A9 /* iDine */ = {
 			isa = PBXGroup;
 			children = (
-				A58057B726ADBEFB00C6C5A9 /* iDineApp.swift */,
-				A58057B926ADBEFB00C6C5A9 /* ContentView.swift */,
-				A58057BB26ADBEFD00C6C5A9 /* Assets.xcassets */,
-				A58057C026ADBEFD00C6C5A9 /* Info.plist */,
+				A58057C726ADBF9B00C6C5A9 /* Shared */,
+				A58057C826ADC03A00C6C5A9 /* Scenes */,
 				A58057BD26ADBEFD00C6C5A9 /* Preview Content */,
 			);
 			path = iDine;
@@ -67,6 +67,41 @@
 				A58057BE26ADBEFD00C6C5A9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A58057C626ADBF9300C6C5A9 /* AppAssets */ = {
+			isa = PBXGroup;
+			children = (
+				A58057B726ADBEFB00C6C5A9 /* iDineApp.swift */,
+				A58057BB26ADBEFD00C6C5A9 /* Assets.xcassets */,
+				A58057C026ADBEFD00C6C5A9 /* Info.plist */,
+			);
+			path = AppAssets;
+			sourceTree = "<group>";
+		};
+		A58057C726ADBF9B00C6C5A9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A58057CD26ADC14000C6C5A9 /* Extensions */,
+				A58057C626ADBF9300C6C5A9 /* AppAssets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A58057C826ADC03A00C6C5A9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A58057CB26ADC0CA00C6C5A9 /* MenuView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A58057CD26ADC14000C6C5A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A58057CE26ADC16200C6C5A9 /* Bundle+Decode.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +132,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "Mohammed Elnaggar";
 				TargetAttributes = {
 					A58057B326ADBEFA00C6C5A9 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -138,8 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A58057BA26ADBEFB00C6C5A9 /* ContentView.swift in Sources */,
 				A58057B826ADBEFB00C6C5A9 /* iDineApp.swift in Sources */,
+				A58057CC26ADC0CA00C6C5A9 /* MenuView.swift in Sources */,
+				A58057CF26ADC16200C6C5A9 /* Bundle+Decode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +308,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iDine/Preview Content\"";
 				DEVELOPMENT_TEAM = 2T2XGF8AGY;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iDine/Info.plist;
+				INFOPLIST_FILE = iDine/Shared/AppAssets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +330,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iDine/Preview Content\"";
 				DEVELOPMENT_TEAM = 2T2XGF8AGY;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iDine/Info.plist;
+				INFOPLIST_FILE = iDine/Shared/AppAssets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
