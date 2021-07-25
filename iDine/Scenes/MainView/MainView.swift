@@ -12,7 +12,13 @@ struct MainView: View {
     var body: some View {
         TabView {
             MenuView()
+                .tabItem {
+                    Label("Menu", systemImage: "list.dash")
+                }
             OrdersView()
+                .tabItem {
+                    Label("Orders", systemImage: "square.and.pencil")
+                }
         }
     }
 }

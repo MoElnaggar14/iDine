@@ -15,7 +15,7 @@ struct iDineApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MenuView()
+            MainView()
                 .environmentObject(order)
         }
     }
