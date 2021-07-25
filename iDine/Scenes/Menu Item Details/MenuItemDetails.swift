@@ -10,12 +10,28 @@ import SwiftUI
 
 struct MenuItemDetails: View {
     
+    @EnvironmentObject var order: Order
     let item: MenuItem
     
     var body: some View {
         VStack {
-            Image(item.mainImage)
+            ZStack(alignment: .bottomTrailing) {
+                Image(item.mainImage)
+                    .resizable()
+                    .scaledToFit()
+                
+                Text("ⓒ\(item.photoCredit)")
+                    .padding(4)
+                    .background(Color.black.opacity(0.5))
+                    .foregroundColor(.white)
+                    .font(.caption)
+                    .cornerRadius(3.0)
+                    .offset(CGSize(width: -5, height: -5))
+            }
+            
             Text(item.description).padding()
+            
+            Spacer()
         }
         .navigationTitle(item.name)
         .navigationBarTitleDisplayMode(.inline)
@@ -26,6 +42,7 @@ struct MenuItemDetails_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MenuItemDetails(item: .example)
+                .environmentObject(Order())
         }
     }
 }
