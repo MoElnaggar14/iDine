@@ -18,7 +18,7 @@ struct MenuView: View {
                 ForEach(menu) { section in
                     Section(header: Text(section.name)) {
                         ForEach(section.items) { item in
-                            NavigationLink(destination: Text(item.name)) {
+                            NavigationLink(destination: MenuItemDetails(item: item)) {
                                 MenuItemRow(item: item)
                             }
                         }
