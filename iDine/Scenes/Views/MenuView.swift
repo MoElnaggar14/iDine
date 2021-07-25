@@ -11,22 +11,18 @@ import SwiftUI
 struct MenuView: View {
     
     let menu = Bundle.main.decode([MenuSection].self, from: "menu.json")
-        
-    fileprivate func extractedFunc() -> List<Never, ForEach<[MenuSection], UUID, Section<Text, ForEach<[MenuItem], UUID, Text>, EmptyView>>> {
-        return List {
-            ForEach(menu) { section in
-                Section(header: Text(section.name)) {
-                    ForEach(section.items) {
-                        Text($0.name)
-                    }
-                }
-            }
-        }
-    }
     
     var body: some View {
         NavigationView {
-            extractedFunc()
+            List {
+                ForEach(menu) { section in
+                    Section(header: Text(section.name)) {
+                        ForEach(section.items) {
+                            MenuItemRow(item: $0)
+                        }
+                    }
+                }
+            }
             .navigationTitle("Menu")
             .listStyle(GroupedListStyle())
         }
