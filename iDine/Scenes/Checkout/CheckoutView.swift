@@ -22,6 +22,7 @@ struct CheckoutView: View {
     var totalPrice: String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "en_US")
         
         let total = Double(order.total)
         let tipValue = total / 100 * Double(tipAmount)
@@ -55,7 +56,7 @@ struct CheckoutView: View {
             
             Section(header:
                         Text("TOTAL: \(totalPrice)")
-                        .font(.largeTitle)) {
+                        .font(.headline)) {
                 Button("Confirm Order") {
                     
                 }
